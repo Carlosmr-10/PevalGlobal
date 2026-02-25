@@ -35,6 +35,7 @@ public abstract class Dron {
 	 */
 	/**
 	 * Constructor con atributos predefinidos.
+	 * 
 	 * @param identificador Define el identificador del dron.
 	 * @param autonmíaMax Define la autonomía máxima del dron.
 	 * @param velocidadMax Define la velocidad máxima del dron.
@@ -63,7 +64,7 @@ public abstract class Dron {
 		this.operativo = false;
 	}
 
-	/*
+	/* 
 	 * Getters & setters.
 	 */
 	
@@ -134,7 +135,6 @@ public abstract class Dron {
 		this.operativo = operativo;
 	}
 	
-	
 	/*
 	 * Método para comprobar el estado del dron
 	 */
@@ -156,6 +156,7 @@ public abstract class Dron {
 	 */
 	/**
 	 * Método abstracto para calcular el tiempo de respuesta.
+	 * @param distanciaMision Define la distancia en la que se localiza la misión.
 	 */
 	protected abstract float calculoTiempoRespuesta(float distanciaMision);
 }
