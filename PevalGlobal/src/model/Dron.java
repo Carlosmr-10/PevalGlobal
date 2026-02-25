@@ -1,5 +1,7 @@
 package model;
 
+import java.util.regex.PatternSyntaxException;
+
 /**
  * Clase abstracta que define las caracteristicas generales de un dron 
  * independientemente del tipo de dron que sea.
@@ -67,7 +69,7 @@ public abstract class Dron {
 	 */
 	
 	/**
-	 * Metodo que recoge el identificador del dron.
+	 * Método que recoge el identificador del dron.
 	 * @return una variable con el identificador del dron.
 	 */
 	public String getIdentificador() {
@@ -75,7 +77,7 @@ public abstract class Dron {
 	}
 
 	/**
-	 * Metodo que establece el identificador del dron.
+	 * Método que establece el identificador del dron.
 	 * @param identificador Define el identificador del dron.
 	 */
 	public void setIdentificador(String identificador) {
@@ -83,7 +85,7 @@ public abstract class Dron {
 	}
 
 	/**
-	 * Metodo que recoge la autonomía máxima del dron.
+	 * Método que recoge la autonomía máxima del dron.
 	 * @return una variable con la autonomía máxima del dron.
 	 */
 	public int getAutonmíaMax() {
@@ -91,7 +93,7 @@ public abstract class Dron {
 	}
 
 	/**
-	 * Metodo que establece la autonomía máxima del dron.
+	 * Método que establece la autonomía máxima del dron.
 	 * @param autonmíaMax Define la autonomía máxima del dron.
 	 */
 	public void setAutonmíaMax(int autonmíaMax) {
@@ -99,7 +101,7 @@ public abstract class Dron {
 	}
 
 	/**
-	 * Metodo que recoge la velocidad máxima del dron.
+	 * Método que recoge la velocidad máxima del dron.
 	 * @return una variable con la velocidad máxima del dron.
 	 */
 	public float getVelocidadMax() {
@@ -107,7 +109,7 @@ public abstract class Dron {
 	}
 
 	/**
-	 * Metodo que establece la velocidad máxima del lol.
+	 * Método que establece la velocidad máxima del lol.
 	 * @param velocidadMax Define la velocidad máxima del dron.
 	 */
 	public void setVelocidadMax(float velocidadMax) {
@@ -115,7 +117,7 @@ public abstract class Dron {
 	}
 
 	/**
-	 * Metodo que recoge el estado del dron.
+	 * Método que recoge el estado del dron.
 	 * @return <ul>
 	 *             <li>True: si el dron está operativo.</li>
 	 *             <li>False: si el dron no está operativo.</li>
@@ -126,19 +128,40 @@ public abstract class Dron {
 	}
 
 	/**
-	 * Metodo que establece el estado del dron.
+	 * Método que establece el estado del dron.
 	 * @param operativo Define si el dron está operativo o no.
 	 */
 	public void setOperativo(boolean operativo) {
 		this.operativo = operativo;
 	}
 	
-	/*
-	 * Metodo requerido para calcular el tiempo de respuesta.
-	 */
 	
+	/*
+	 * Método para comprobar el estado del dron
+	 */
 	/**
-	 * Metodo abstracto para calcular el tiempo de respuesta.
+	 * Método para comprobar el estado del dron
+	 */
+	protected void comprobarEstado() {
+		
+		try {
+			
+			if (operativo) {
+				System.out.println("El dron está operativo actualemente");
+			}
+		} 
+		catch (Exception e) {
+			
+			System.out.println("El dron no está operativo");
+		}
+	}
+	
+	
+	/*
+	 * Método requerido para calcular el tiempo de respuesta.
+	 */
+	/**
+	 * Método abstracto para calcular el tiempo de respuesta.
 	 */
 	protected abstract void calculoTiempoRespuesta();
 }
