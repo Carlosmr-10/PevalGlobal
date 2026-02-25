@@ -45,6 +45,6 @@ public class DronMontaña extends Dron {
 					+ " no puede superar a la autonomía máxima");
 		}
 		
-		return 0;
+		return tiempoRespuesta;
 	}
 }
