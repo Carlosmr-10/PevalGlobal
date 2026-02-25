@@ -3,8 +3,8 @@ package model;
 public class DronMaritimo extends Dron {
 
 	@Override
-	protected void calculoTiempoRespuesta() {
+	protected float calculoTiempoRespuesta(float distanciaMision) {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 }

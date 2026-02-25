@@ -143,15 +143,10 @@ public abstract class Dron {
 	 */
 	protected void comprobarEstado() {
 		
-		try {
+		if (!operativo) {
 			
-			if (operativo) {
-				System.out.println("El dron está operativo actualemente");
-			}
-		} 
-		catch (Exception e) {
-			
-			System.out.println("El dron no está operativo");
+			throw new IllegalStateException("El dron " + identificador +
+				"no está operativo");
 		}
 	}
 	
@@ -162,5 +157,5 @@ public abstract class Dron {
 	/**
 	 * Método abstracto para calcular el tiempo de respuesta.
 	 */
-	protected abstract void calculoTiempoRespuesta();
+	protected abstract float calculoTiempoRespuesta(float distanciaMision);
 }
