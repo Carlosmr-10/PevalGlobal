@@ -1,6 +1,5 @@
 package model;
 
-import java.util.regex.PatternSyntaxException;
 
 /**
  * Clase abstracta que define las caracteristicas generales de un dron 
