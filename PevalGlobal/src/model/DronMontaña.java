@@ -20,7 +20,7 @@ public class DronMontaña extends Dron {
 	 * @param altitud Define la altitud a la que puede volar el dron.
 	 */
 	public DronMontaña(String identificador, int autonmíaMax,
-			double velocidadMax, boolean operativo, double altitud) {
+			int velocidadMax, boolean operativo, double altitud) {
 		super(identificador, autonmíaMax, velocidadMax, operativo);
 		
 		if (altitud < 0) {
