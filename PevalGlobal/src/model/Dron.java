@@ -158,5 +158,5 @@ public abstract class Dron {
 	 * Método abstracto para calcular el tiempo de respuesta.
 	 * @param distanciaMision Define la distancia en la que se localiza la misión.
 	 */
-	public abstract float calculoTiempoRespuesta(float distanciaMision);
+	public abstract double calculoTiempoRespuesta(double distanciaMision);
 }
