@@ -52,7 +52,7 @@ public class DronMontaña extends Dron {
 	 * Método abstracto para calcular el tiempo de respuesta.
 	 * @param distanciaMision Define la distancia en la que se localiza la misión.
 	 */
-	protected float calculoTiempoRespuesta(float distanciaMision) {
+	public float calculoTiempoRespuesta(float distanciaMision) {
 
 		float tiempoRespuesta;
 		

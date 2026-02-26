@@ -141,7 +141,7 @@ public abstract class Dron {
 	/**
 	 * Método para comprobar el estado del dron
 	 */
-	protected void comprobarEstado() {
+	public void comprobarEstado() {
 		
 		if (!operativo) {
 			
@@ -158,5 +158,5 @@ public abstract class Dron {
 	 * Método abstracto para calcular el tiempo de respuesta.
 	 * @param distanciaMision Define la distancia en la que se localiza la misión.
 	 */
-	protected abstract float calculoTiempoRespuesta(float distanciaMision);
+	public abstract float calculoTiempoRespuesta(float distanciaMision);
 }
