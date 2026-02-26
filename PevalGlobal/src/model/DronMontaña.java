@@ -8,7 +8,7 @@ public class DronMontaña extends Dron {
 	/**
 	 * Variable que define la altitud a la que puede volar el dron de montaña.
 	 */
-	private float altitud;
+	private double altitud;
 	
 	/**
 	 * Constructor con variables para definir un dron de montaña.
@@ -20,7 +20,7 @@ public class DronMontaña extends Dron {
 	 * @param altitud Define la altitud a la que puede volar el dron.
 	 */
 	public DronMontaña(String identificador, int autonmíaMax,
-			float velocidadMax, boolean operativo, float altitud) {
+			float velocidadMax, boolean operativo, double altitud) {
 		super(identificador, autonmíaMax, velocidadMax, operativo);
 		
 		if (altitud < 0) {
@@ -35,7 +35,7 @@ public class DronMontaña extends Dron {
 	 * Método que recoge la altitud del dron de montaña.
 	 * @return Altitud a la que puede volar el dron de montaña.
 	 */
-	public float getAltitud() {
+	public double getAltitud() {
 		return altitud;
 	}
 
@@ -52,9 +52,9 @@ public class DronMontaña extends Dron {
 	 * Método abstracto para calcular el tiempo de respuesta.
 	 * @param distanciaMision Define la distancia en la que se localiza la misión.
 	 */
-	public float calculoTiempoRespuesta(float distanciaMision) {
+	public double calculoTiempoRespuesta(double distanciaMision) {
 
-		float tiempoRespuesta;
+		double tiempoRespuesta;
 		
 		if (distanciaMision < 0) {
 			

@@ -23,7 +23,7 @@ public abstract class Dron {
 	/**
 	 * Variable que define la velocidad máxima del dron.
 	 */
-	protected float velocidadMax;
+	protected double velocidadMax;
 	
 	/**
 	 * Variable que define si el dron está activo o no.
@@ -104,7 +104,7 @@ public abstract class Dron {
 	 * Método que recoge la velocidad máxima del dron.
 	 * @return una variable con la velocidad máxima del dron.
 	 */
-	public float getVelocidadMax() {
+	public double getVelocidadMax() {
 		return velocidadMax;
 	}
 
@@ -112,7 +112,7 @@ public abstract class Dron {
 	 * Método que establece la velocidad máxima del lol.
 	 * @param velocidadMax Define la velocidad máxima del dron.
 	 */
-	public void setVelocidadMax(float velocidadMax) {
+	public void setVelocidadMax(double velocidadMax) {
 		this.velocidadMax = velocidadMax;
 	}
 
@@ -158,5 +158,5 @@ public abstract class Dron {
 	 * Método abstracto para calcular el tiempo de respuesta.
 	 * @param distanciaMision Define la distancia en la que se localiza la misión.
 	 */
-	public abstract float calculoTiempoRespuesta(float distanciaMision);
+	public abstract double calculoTiempoRespuesta(double distanciaMision);
 }
