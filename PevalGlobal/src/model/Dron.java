@@ -41,7 +41,7 @@ public abstract class Dron {
 	 * @param velocidadMax Define la velocidad máxima del dron.
 	 * @param operativo Define si el dron está activo o no.
 	 */
-	public Dron(String identificador, int autonmíaMax, float velocidadMax, boolean operativo) {
+	public Dron(String identificador, int autonmíaMax, double velocidadMax, boolean operativo) {
 		
 		this.identificador = identificador;
 		this.autonmíaMax = autonmíaMax;
