@@ -141,13 +141,15 @@ public abstract class Dron {
 	/**
 	 * Método para comprobar el estado del dron
 	 */
-	public void comprobarEstado() {
+	public boolean comprobarEstado() {
 		
 		if (!operativo) {
 			
 			throw new IllegalStateException("El dron " + identificador +
 				"no está operativo");
 		}
+		
+		return operativo;
 	}
 	
 	
