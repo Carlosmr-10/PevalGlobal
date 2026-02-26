@@ -148,6 +148,7 @@ public abstract class Dron {
 			throw new IllegalStateException("El dron " + identificador +
 				"no está operativo");
 		}
+		
 		return operativo;
 	}
 	

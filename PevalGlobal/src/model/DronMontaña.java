@@ -43,7 +43,7 @@ public class DronMontaña extends Dron {
 	 * Método que establece la altitud del dron de montaña.
 	 * @param altitud Define la altitud a la que puede volar el dron.
 	 */
-	public void setAltitud(float altitud) {
+	public void setAltitud(double altitud) {
 		this.altitud = altitud;
 	}
 
