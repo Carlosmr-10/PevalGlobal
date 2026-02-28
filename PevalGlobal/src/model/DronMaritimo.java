@@ -22,7 +22,7 @@ public class DronMaritimo extends Dron {
 	 * @param operativo Define si el dron está activo o no. 
 	 * @param resistenciaSal Define el factor de resistencia a la salinidad (0-100).
 	 */
-	public DronMaritimo(String identificador, int autonmíaMax, float velocidadMax, boolean operativo, int resistenciaSal) {
+	public DronMaritimo(String identificador, int autonmíaMax, int velocidadMax, boolean operativo, int resistenciaSal) {
 		super(identificador, autonmíaMax, velocidadMax, operativo);
 		this.resistenciaSal = resistenciaSal;
 	}
@@ -31,18 +31,17 @@ public class DronMaritimo extends Dron {
 	 * Calcula el tiempo de respuesta para una misión marítima basándose en la distancia.
 	 * @param distancia La distancia de la misión.
 	 * @return El tiempo calculado en minutos.
-	 * @throws Exception Si el dron no está operativo, la distancia es negativa o excede la autonomía. 
 	 */
 	@Override
-	public double calculoTiempoRespuesta(double distancia) throws Exception {
+	public double calculoTiempoRespuesta(double distancia) {
 		// Condición, si la distancia es negativa, lanzar una excepción 
 		if (distancia < 0) {
-			throw new Exception("La distancia no puede ser negativa.");
+			throw new IllegalStateException("La distancia no puede ser negativa.");
 		}
 
 		// Otra condición para saber el estado del dron (debe lanzar excepción si no está operativo) 
 		if (!this.operativo) {
-			throw new Exception("El dron no está operativo.");
+			throw new IllegalStateException("El dron no está operativo.");
 		}
 
 		// Dividir la distancia de la misión entre la velocidad máxima 
@@ -55,7 +54,7 @@ public class DronMaritimo extends Dron {
 
 		// Comprobar que el tiempo calculado no exceda la autonomía disponible 
 		if (tiempo > this.autonmíaMax) {
-			throw new Exception("El tiempo calculado excede la autonomía disponible.");
+			throw new IllegalStateException("El tiempo calculado excede la autonomía disponible.");
 		}
 
 		return tiempo;
@@ -78,4 +77,5 @@ public class DronMaritimo extends Dron {
 			this.resistenciaSal = resistenciaSal;
 		}
 	}
+
 }
