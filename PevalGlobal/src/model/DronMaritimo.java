@@ -29,9 +29,9 @@ public class DronMaritimo extends Dron {
 	}
 
 	/**
-	 * Calcula el tiempo de respuesta para una misión marítima basándose en la distancia. [cite: 25, 29, 82]
-	 * @param distancia La distancia de la misión.
-	 * @return El tiempo calculado en minutos.
+	 * Método abstracto para calcular el tiempo de respuesta.
+	 * @param distancia Define la distancia en la que se localiza la misión.
+	 * @return El tiempo de respuesta ya calculado.
 	 */
 	@Override
 	public double calculoTiempoRespuesta(double distancia) {

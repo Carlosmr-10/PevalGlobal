@@ -143,8 +143,8 @@ public abstract class Dron {
 	 */
 	/**
 	 * Método para comprobar el estado del dron
+	 * @return El estado del dron
 	 */
-
 	public boolean comprobarEstado() {
 		
 		if (!operativo) {
@@ -163,7 +163,7 @@ public abstract class Dron {
 	/**
 	 * Método abstracto para calcular el tiempo de respuesta.
 	 * @param distanciaMision Define la distancia en la que se localiza la misión.
+	 * @return El tiempo de respuesta ya calculado.
 	 */
-
 	public abstract double calculoTiempoRespuesta(double distanciaMision);
 }
